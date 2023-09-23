@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Informe um número<input type="text" id="num"><br>
+    <input type="button" onclick="calcular()" value="calcular"><br>
+    </form>
+    <h1 id="resultado"></h1>
+    <h1 id="somatorio"></h1>
+
+    <script>
+        // window.onload=function(){
+        //   document
+        // }
+        function calcular() {
+            var numero = parseInt(document.getElementById("num").value);
+            var numeroPar = [];
+            var soma = 0;
+            var vInicial = 2;
+
+            while (vInicial <= numero) {
+                numeroPar.push(vInicial);
+                console.log(vInicial);
+                soma = soma + vInicial;
+                vInicial += 2;
+
+                //document.getElementById('resultado').innerHTML= vInicial;
+
+            }
+            console.log(soma);
+            document.getElementById('resultado').innerHTML = "Os números são: " + numeroPar;
+            document.getElementById('somatorio').innerHTML = "A soma dos números é: " + soma;
+
+        }  
+    </script>
+</body>
+
+</html>
