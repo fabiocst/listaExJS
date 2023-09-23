@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manipulando Vetores em JS</h1><br><br>
+    <label for="novoValor">Insira um novo valor</label>
+    <input type="number" id="novoValor"><br><br>
+    <button id="gravaValor" onclick="gravaValor()">Salvar entrada</button>
+    <button id="mostraValores" onclick="mostraValores()">Mostrar Valores Salvos</button>
+    <button id="mostraMenor" onclick="mostraMenor()">Mostra Menor</button>
+    <button id="mostraMaior" onclick="mostraMaior()">Mostra Maior</button>
+    <h3 id="resultado"></h3>
+
+    <script>
+        const valores = [];
+        function customSort(a, b){return a>b; }
+        function gravaValor(){
+            var valor=parseInt(document.getElementById("novoValor").value);
+            valores.push(valor);
+            console.log(valores);
+            document.getElementById("novoValor").innerHTML="";
+        }
+        function mostraValores(){
+            //var tamanho= valores.le();
+            valores.sort(customSort);
+            document.getElementById("resultado").innerHTML=valores;
+        }
+        function mostraMenor(){
+            valores.sort();
+            console.log(valores);
+            document.getElementById("resultado").innerHTML=valores[0];
+        }
+        function mostraMaior(){
+
+        }
+
+    </script>
+</body>
+</html>

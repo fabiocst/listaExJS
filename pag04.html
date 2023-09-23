@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculo de consumo de viagem</h1>
+    <label for="distancia">Distancia percorrida</label>
+    <input type="number" id="distancia"><br><br>
+    <label for="precoGas">Preço por litro de gasolina</label>
+    <input type="number" id="precoGas"><br><br>
+    <button id="Calcular" onclick="calculaGasto()">Calcular Gasto</button>
+    <h2 id="resultado"></h2>
+
+    <script>
+        function calculaGasto(){
+            var dist=document.getElementById("distancia").value;
+            var valorGas=document.getElementById("precoGas").value;
+            var resultado= (dist/8)*valorGas;
+            console.log(resultado);
+            document.getElementById("resultado").innerHTML="Para percorrer "+dist+"Kms, custará R$"+resultado;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculo de Assentamento para piso</h1><br><br>
+    <label for="lado1">Informe a largura em metros</label>
+    <input type="number" id="lado1"><br><br>
+    <label for="lado2">Informe o comprimento em metros</label>
+    <input type="number" id="lado2"><br><br>
+    <button id="calcular" onclick="calculaValor()">Calcular Orçamento</button><br><br>
+    <h2 id="resultado"></h2>
+
+    <script>
+        function calculaValor(){
+            var lado1= document.getElementById("lado1").value;
+            var lado2= document.getElementById("lado2").value;
+            var metrosQuad= lado1*lado2;
+            var total= metrosQuad*36;
+            document.getElementById("resultado").innerHTML="O custo para assentar "+metrosQuad+"M² de piso é de R$"+total;
+
+        }
+    </script>
+</body>
+</html>

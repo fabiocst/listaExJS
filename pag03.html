@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <input
+    <h1>Lista de Produtos</h1><br>
+
+    <label for="prod1">Produto 1:</label>
+    <input type="text" id="prod1">
+    <label for="prod1"> Valor:</label>
+    <input type="text" id="val1">
+    <label for="prod1"> Quantidade:</label>
+    <input type="text" id="qtd1"><br><br>
+
+
+    <label for="prod2">Produto 2:</label>
+    <input type="text" id="prod2">
+    <label for="prod2"> Valor:</label>
+    <input type="text" id="val2">
+    <label for="prod2"> Quantidade:</label>
+    <input type="text" id="qtd2"><br><br>
+
+    <label for="prod3">Produto 3:</label>
+    <input type="text" id="prod3">
+    <label for="prod3"> Valor:</label>
+    <input type="text" id="val3">
+    <label for="prod3"> Quantidade:</label>
+    <input type="text" id="qtd3"><br>
+    <button id="calcular" onclick="calculaTotal()">Calcular Total</button>
+    <h2 id="total">
+        </h1>
+
+        <script>
+
+
+            function calculaTotal() {
+                var valor1 = document.getElementById("val1").value;
+                var valor2 = document.getElementById("val2").value;
+                var valor3 = document.getElementById("val3").value;
+                var quantidade1 = document.getElementById("qtd1").value;
+                var quantidade2 = document.getElementById("qtd2").value;
+                var quantidade3 = document.getElementById("qtd3").value;
+                total = (valor1 * quantidade1) + (valor2 * quantidade2) + (valor3 * quantidade3);
+                console.log(total);
+                document.getElementById("total").innerHTML = "O valor total da compra foi de: "+total+" Reais";
+            }
+        </script>
+
+
 </body>
+
 </html>
